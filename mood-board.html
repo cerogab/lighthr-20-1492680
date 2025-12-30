@@ -120,9 +120,7 @@
         .image-item:hover {
             box-shadow: var(--shadow-hover);
             z-index: 100 !important;
-            transform: translate(var(--transform-hover-x, 0), var(--transform-hover-y, 0)) 
-                       rotate(var(--transform-hover-rotate, 0deg)) 
-                       scale(1.1);
+            transform: scale(1.05);
         }
 
         .image-item img {
@@ -132,237 +130,71 @@
             display: block;
         }
 
-        /* Individual Item Positioning & Transforms */
-        .item-1 {
-            top: 5%;
-            left: 12%;
-            width: var(--size-large);
-            height: calc(var(--size-large) * 0.7);
-            transform: translate(var(--transform-1-x), var(--transform-1-y)) 
-                       rotate(var(--transform-1-rotate)) 
-                       scale(var(--transform-1-scale));
-            z-index: 10;
-            --filter-saturate: saturate(105%);
-        }
-
-        .item-2 {
-            top: 8%;
-            left: 28%;
+        /* Size Categories Layout */
+        /* SMALL IMAGES - Top Section */
+        .size-small {
             width: var(--size-small);
             height: var(--size-small);
-            transform: translate(var(--transform-2-x), var(--transform-2-y)) 
-                       rotate(var(--transform-2-rotate)) 
-                       scale(var(--transform-2-scale));
-            z-index: 15;
         }
 
-        .item-3 {
-            top: 12%;
-            left: 37%;
-            width: calc(var(--size-small) * 0.8);
-            height: calc(var(--size-medium) * 0.6);
-            transform: translate(var(--transform-3-x), var(--transform-3-y)) 
-                       rotate(var(--transform-3-rotate)) 
-                       scale(var(--transform-3-scale));
-            z-index: 8;
-        }
-
-        .item-4 {
-            top: 10%;
-            left: 45%;
-            width: var(--size-small);
-            height: calc(var(--size-small) * 1.2);
-            transform: translate(var(--transform-4-x), var(--transform-4-y)) 
-                       rotate(var(--transform-4-rotate)) 
-                       scale(var(--transform-4-scale));
-            z-index: 12;
-        }
-
-        .item-5 {
-            top: 3%;
-            left: 55%;
-            width: var(--size-medium);
-            height: calc(var(--size-medium) * 0.8);
-            transform: translate(var(--transform-5-x), var(--transform-5-y)) 
-                       rotate(var(--transform-5-rotate)) 
-                       scale(var(--transform-5-scale));
-            z-index: 14;
-            box-shadow: var(--shadow-strong);
-        }
-
-        .item-6 {
-            top: 5%;
-            left: 75%;
-            width: var(--size-xlarge);
-            height: calc(var(--size-xlarge) * 0.5);
-            transform: rotate(-4deg) scale(0.95);
-            z-index: 11;
-        }
-
-        .item-7 {
-            top: 20%;
-            left: 5%;
-            width: var(--size-medium);
-            height: calc(var(--size-medium) * 0.6);
-            transform: rotate(3deg);
-            z-index: 9;
-        }
-
-        .item-8 {
-            top: 35%;
-            left: 3%;
-            width: var(--size-large);
-            height: calc(var(--size-large) * 0.9);
-            transform: rotate(-2deg);
-            z-index: 16;
-            box-shadow: var(--shadow-strong);
-        }
-
-        .item-9 {
-            top: 30%;
-            left: 15%;
+        /* MEDIUM IMAGES - Middle Section */
+        .size-medium {
             width: var(--size-medium);
             height: var(--size-medium);
-            transform: rotate(5deg);
-            z-index: 13;
         }
 
-        .item-10 {
-            top: 25%;
-            left: 27%;
-            width: calc(var(--size-small) * 1.3);
-            height: calc(var(--size-small) * 1.3);
-            transform: rotate(-3deg);
-            z-index: 10;
-        }
-
-        .item-11 {
-            top: 42%;
-            left: 43%;
-            width: var(--size-small);
-            height: calc(var(--size-small) * 1.4);
-            transform: rotate(2deg);
-            z-index: 11;
-        }
-
-        .item-12 {
-            top: 30%;
-            left: 56%;
-            width: var(--size-medium);
-            height: calc(var(--size-medium) * 0.7);
-            transform: rotate(-4deg);
-            z-index: 12;
-        }
-
-        .item-13 {
-            top: 22%;
-            left: 70%;
+        /* LARGE IMAGES - Bottom Section */
+        .size-large {
             width: var(--size-large);
-            height: calc(var(--size-large) * 0.75);
-            transform: rotate(3deg);
-            z-index: 15;
+            height: var(--size-large);
         }
 
-        .item-14 {
-            top: 48%;
-            left: 67%;
-            width: var(--size-medium);
-            height: calc(var(--size-medium) * 1.1);
-            transform: rotate(-2deg);
-            z-index: 10;
-        }
+        /* Small Images Positioning */
+        .item-2 { top: 5%; left: 5%; }
+        .item-4 { top: 5%; left: 20%; }
+        .item-11 { top: 5%; left: 35%; }
+        .item-15 { top: 5%; left: 50%; }
+        .item-17 { top: 5%; left: 65%; }
+        .item-20 { top: 5%; left: 80%; }
 
-        .item-15 {
-            top: 52%;
-            left: 7%;
-            width: var(--size-small);
-            height: var(--size-small);
-            transform: rotate(4deg);
-            z-index: 8;
-        }
+        /* Medium Images Positioning */
+        .item-5 { top: 30%; left: 5%; }
+        .item-7 { top: 30%; left: 25%; }
+        .item-9 { top: 30%; left: 45%; }
+        .item-12 { top: 30%; left: 65%; }
+        .item-14 { top: 50%; left: 5%; }
+        .item-16 { top: 50%; left: 25%; }
+        .item-18 { top: 50%; left: 45%; }
 
-        .item-16 {
-            top: 60%;
-            left: 6%;
-            width: var(--size-medium);
-            height: calc(var(--size-medium) * 0.9);
-            transform: rotate(-5deg);
-            z-index: 14;
-            box-shadow: var(--shadow-strong);
-        }
+        /* Large Images Positioning */
+        .item-1 { top: 75%; left: 5%; }
+        .item-8 { top: 75%; left: 30%; }
+        .item-13 { top: 75%; left: 55%; }
+        .item-19 { top: 75%; left: 80%; }
 
-        .item-17 {
-            top: 65%;
-            left: 40%;
-            width: var(--size-small);
-            height: calc(var(--size-small) * 0.8);
-            transform: rotate(3deg);
-            z-index: 9;
-        }
-
-        .item-18 {
-            top: 57%;
-            left: 54%;
-            width: var(--size-medium);
-            height: calc(var(--size-medium) * 1.2);
-            transform: rotate(-3deg);
-            z-index: 13;
-        }
-
-        .item-19 {
-            top: 63%;
-            left: 75%;
-            width: var(--size-large);
-            height: calc(var(--size-large) * 0.65);
-            transform: rotate(2deg);
-            z-index: 11;
-        }
-
-        .item-20 {
-            top: 75%;
+        /* Extra items - distributed evenly */
+        .item-3 {
+            top: 20%;
             left: 85%;
             width: var(--size-small);
-            height: calc(var(--size-small) * 1.3);
-            transform: rotate(-4deg);
-            z-index: 10;
-        }
-
-        /* Logo/Graphic Items */
-        .logo-item {
-            background-color: transparent;
-            box-shadow: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .logo-1 {
-            top: 28%;
-            left: 16%;
-            width: calc(var(--size-small) * 1.2);
-            height: calc(var(--size-small) * 1.2);
-            transform: rotate(-8deg);
-            z-index: 20;
-        }
-
-        .logo-2 {
-            top: 38%;
-            left: 70%;
-            width: var(--size-small);
             height: var(--size-small);
-            transform: rotate(5deg);
-            z-index: 20;
         }
-
-        .logo-3 {
-            top: 70%;
+        .item-6 {
+            top: 50%;
             left: 65%;
             width: var(--size-medium);
-            height: calc(var(--size-medium) * 0.6);
-            transform: rotate(-3deg);
-            z-index: 20;
+            height: var(--size-medium);
+        }
+        .item-10 {
+            top: 20%;
+            left: 5%;
+            width: var(--size-small);
+            height: var(--size-small);
+        }
+
+        /* Logo/Graphic Items - Hidden for size organization */
+        .logo-item {
+            display: none;
         }
 
         /* Responsive Design */
@@ -384,43 +216,24 @@
             }
         }
 
-        /* Animation on Load */
-        @keyframes fadeInUp {
+        /* Animation on Load - Simple fade in */
+        @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(30px) rotate(0deg);
             }
             to {
                 opacity: 1;
-                transform: translateY(0) rotate(var(--item-rotation, 0deg));
             }
         }
 
-        .image-item,
-        .logo-item {
-            animation: fadeInUp 0.6s ease-out backwards;
+        .image-item {
+            animation: fadeIn 0.5s ease-out backwards;
         }
 
-        .item-1 { animation-delay: 0.1s; }
-        .item-2 { animation-delay: 0.15s; }
-        .item-3 { animation-delay: 0.2s; }
-        .item-4 { animation-delay: 0.25s; }
-        .item-5 { animation-delay: 0.3s; }
-        .item-6 { animation-delay: 0.35s; }
-        .item-7 { animation-delay: 0.4s; }
-        .item-8 { animation-delay: 0.45s; }
-        .item-9 { animation-delay: 0.5s; }
-        .item-10 { animation-delay: 0.55s; }
-        .item-11 { animation-delay: 0.6s; }
-        .item-12 { animation-delay: 0.65s; }
-        .item-13 { animation-delay: 0.7s; }
-        .item-14 { animation-delay: 0.75s; }
-        .item-15 { animation-delay: 0.8s; }
-        .item-16 { animation-delay: 0.85s; }
-        .item-17 { animation-delay: 0.9s; }
-        .item-18 { animation-delay: 0.95s; }
-        .item-19 { animation-delay: 1s; }
-        .item-20 { animation-delay: 1.05s; }
+        .item-1, .item-2, .item-3, .item-4, .item-5 { animation-delay: 0.1s; }
+        .item-6, .item-7, .item-8, .item-9, .item-10 { animation-delay: 0.2s; }
+        .item-11, .item-12, .item-13, .item-14, .item-15 { animation-delay: 0.3s; }
+        .item-16, .item-17, .item-18, .item-19, .item-20 { animation-delay: 0.4s; }
     </style>
 </head>
 <body>
@@ -428,85 +241,89 @@
         <!-- Central Text -->
         <div class="central-text">Beyond Noise</div>
 
-        <!-- Image Items -->
-        <div class="image-item item-1">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400" alt="Fashion">
-        </div>
+        <!-- Image Items Organized by Size -->
 
-        <div class="image-item item-2">
+        <!-- SMALL IMAGES -->
+        <div class="image-item item-2 size-small">
             <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=400" alt="Art">
         </div>
 
-        <div class="image-item item-3">
-            <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=400" alt="Nature">
-        </div>
-
-        <div class="image-item item-4">
+        <div class="image-item item-4 size-small">
             <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Abstract">
         </div>
 
-        <div class="image-item item-5">
-            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400" alt="Sculpture">
-        </div>
-
-        <div class="image-item item-6">
-            <img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?w=400" alt="Design">
-        </div>
-
-        <div class="image-item item-7">
-            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400" alt="Model">
-        </div>
-
-        <div class="image-item item-8">
-            <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=400" alt="Architecture">
-        </div>
-
-        <div class="image-item item-9">
-            <img src="https://images.unsplash.com/photo-1541199249251-f713e6145474?w=400" alt="Concept">
-        </div>
-
-        <div class="image-item item-10">
-            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=400" alt="Portrait">
-        </div>
-
-        <div class="image-item item-11">
+        <div class="image-item item-11 size-small">
             <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=400" alt="Figure">
         </div>
 
-        <div class="image-item item-12">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Beauty">
-        </div>
-
-        <div class="image-item item-13">
-            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=400" alt="Modern">
-        </div>
-
-        <div class="image-item item-14">
-            <img src="https://images.unsplash.com/photo-1509281373149-e957c6296406?w=400" alt="Fashion Editorial">
-        </div>
-
-        <div class="image-item item-15">
+        <div class="image-item item-15 size-small">
             <img src="https://images.unsplash.com/photo-1531265726475-52ad60219627?w=400" alt="Minimal">
         </div>
 
-        <div class="image-item item-16">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Close Up">
-        </div>
-
-        <div class="image-item item-17">
+        <div class="image-item item-17 size-small">
             <img src="https://images.unsplash.com/photo-1569234849731-4fc1f3f1b91e?w=400" alt="Person">
         </div>
 
-        <div class="image-item item-18">
+        <div class="image-item item-20 size-small">
+            <img src="https://images.unsplash.com/photo-1490349368154-73de9c9bc37c?w=400" alt="Window">
+        </div>
+
+        <div class="image-item item-3 size-small">
+            <img src="https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=400" alt="Nature">
+        </div>
+
+        <div class="image-item item-10 size-small">
+            <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?w=400" alt="Portrait">
+        </div>
+
+        <!-- MEDIUM IMAGES -->
+        <div class="image-item item-5 size-medium">
+            <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400" alt="Sculpture">
+        </div>
+
+        <div class="image-item item-7 size-medium">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400" alt="Model">
+        </div>
+
+        <div class="image-item item-9 size-medium">
+            <img src="https://images.unsplash.com/photo-1541199249251-f713e6145474?w=400" alt="Concept">
+        </div>
+
+        <div class="image-item item-12 size-medium">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Beauty">
+        </div>
+
+        <div class="image-item item-14 size-medium">
+            <img src="https://images.unsplash.com/photo-1509281373149-e957c6296406?w=400" alt="Fashion Editorial">
+        </div>
+
+        <div class="image-item item-16 size-medium">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Close Up">
+        </div>
+
+        <div class="image-item item-18 size-medium">
             <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400" alt="Style">
         </div>
 
-        <div class="image-item item-19">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Aesthetic">
+        <div class="image-item item-6 size-medium">
+            <img src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?w=400" alt="Design">
         </div>
 
-        <div class="image-item item-20">
-            <img src="https://images.unsplash.com/photo-1490349368154-73de9c9bc37c?w=400" alt="Window">
+        <!-- LARGE IMAGES -->
+        <div class="image-item item-1 size-large">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400" alt="Fashion">
+        </div>
+
+        <div class="image-item item-8 size-large">
+            <img src="https://images.unsplash.com/photo-1580274455191-1c62238fa333?w=400" alt="Architecture">
+        </div>
+
+        <div class="image-item item-13 size-large">
+            <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=400" alt="Modern">
+        </div>
+
+        <div class="image-item item-19 size-large">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Aesthetic">
         </div>
 
         <!-- Logo/Graphic Elements -->
@@ -530,19 +347,12 @@
     </div>
 
     <script>
-        // Interactive hover effects with custom properties
+        // Simple hover effects without rotation
         document.querySelectorAll('.image-item').forEach(item => {
             item.addEventListener('mouseenter', function() {
-                // Dynamically update CSS variables on hover
-                const rotation = Math.random() * 10 - 5; // -5 to 5 degrees
-                this.style.setProperty('--transform-hover-rotate', `${rotation}deg`);
+                // Images organized by size with equal spacing
+                // No rotation effects for clean organization
             });
-        });
-
-        // Random initial rotations stored in CSS variables
-        document.querySelectorAll('.image-item').forEach((item, index) => {
-            const rotation = (Math.random() * 8 - 4); // -4 to 4 degrees
-            item.style.setProperty('--item-rotation', `${rotation}deg`);
         });
     </script>
 </body>
