@@ -1,0 +1,288 @@
+/* ============================================
+   CSS CUSTOM PROPERTIES DOCUMENTATION
+   Beyond Noise Mood Board
+   ============================================ */
+
+/*
+ * This file documents all CSS custom properties (CSS variables)
+ * used in the mood board design for transforms, colors, shadows,
+ * filters, and more.
+ */
+
+:root {
+    /* ==========================================
+       COLOR VARIABLES
+       ========================================== */
+    
+    /* Background Colors */
+    --bg-main: #e8e8e8;                    /* Main background color - light gray */
+    --bg-overlay: rgba(255, 255, 255, 0.5); /* Overlay background - semi-transparent white */
+    
+    /* Text Colors */
+    --text-primary: #2a2a2a;               /* Primary text - dark gray */
+    --text-accent: #7a7a7a;                /* Accent text - medium gray */
+    
+    /* Inherited from original styles.css */
+    --lightblue-main: #f1f5f9;             /* Light blue background */
+    --coldgrey: #93aac2;                   /* Cold grey accent */
+    --coldgreytext: #a0b4c9;               /* Cold grey for text */
+    --medgrey: #e5eaf0;                    /* Medium grey */
+    
+    
+    /* ==========================================
+       SHADOW VARIABLES
+       ========================================== */
+    
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.08);      /* Subtle shadow for minimal depth */
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);     /* Medium shadow for standard cards */
+    --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.15);     /* Strong shadow for emphasis */
+    --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.2);      /* Enhanced shadow on hover state */
+    
+    
+    /* ==========================================
+       FILTER VARIABLES
+       ========================================== */
+    
+    --filter-grayscale: grayscale(0%);     /* Grayscale filter - 0% = full color */
+    --filter-brightness: brightness(100%); /* Brightness filter - 100% = normal */
+    --filter-contrast: contrast(100%);     /* Contrast filter - 100% = normal */
+    --filter-saturate: saturate(100%);     /* Saturation filter - 100% = normal */
+    --filter-sepia: sepia(0%);            /* Sepia filter - 0% = no sepia */
+    
+    /* Usage Example:
+       filter: var(--filter-grayscale) var(--filter-brightness) var(--filter-contrast);
+    */
+    
+    
+    /* ==========================================
+       TRANSFORM VARIABLES - ITEM 1
+       ========================================== */
+    
+    --transform-1-rotate: -3deg;           /* Rotation angle */
+    --transform-1-scale: 1;                /* Scale factor */
+    --transform-1-x: 0px;                  /* Horizontal translation */
+    --transform-1-y: 0px;                  /* Vertical translation */
+    
+    /* Usage:
+       transform: translate(var(--transform-1-x), var(--transform-1-y)) 
+                  rotate(var(--transform-1-rotate)) 
+                  scale(var(--transform-1-scale));
+    */
+    
+    
+    /* ==========================================
+       TRANSFORM VARIABLES - ITEM 2
+       ========================================== */
+    
+    --transform-2-rotate: 2deg;
+    --transform-2-scale: 0.9;
+    --transform-2-x: 0px;
+    --transform-2-y: 0px;
+    
+    
+    /* ==========================================
+       TRANSFORM VARIABLES - ITEM 3
+       ========================================== */
+    
+    --transform-3-rotate: -5deg;
+    --transform-3-scale: 1.1;
+    --transform-3-x: 0px;
+    --transform-3-y: 0px;
+    
+    
+    /* ==========================================
+       TRANSFORM VARIABLES - ITEM 4
+       ========================================== */
+    
+    --transform-4-rotate: 4deg;
+    --transform-4-scale: 0.95;
+    --transform-4-x: 0px;
+    --transform-4-y: 0px;
+    
+    
+    /* ==========================================
+       TRANSFORM VARIABLES - ITEM 5
+       ========================================== */
+    
+    --transform-5-rotate: -2deg;
+    --transform-5-scale: 1.05;
+    --transform-5-x: 0px;
+    --transform-5-y: 0px;
+    
+    /* Note: Additional items (6-20) use inline transform values
+       but can be converted to custom properties following this pattern */
+    
+    
+    /* ==========================================
+       SIZE VARIABLES
+       ========================================== */
+    
+    --size-small: 120px;                   /* Small element size */
+    --size-medium: 180px;                  /* Medium element size */
+    --size-large: 240px;                   /* Large element size */
+    --size-xlarge: 300px;                  /* Extra large element size */
+    
+    /* Responsive sizes at 768px breakpoint:
+       --size-small: 80px;
+       --size-medium: 120px;
+       --size-large: 160px;
+       --size-xlarge: 200px;
+    */
+    
+    
+    /* ==========================================
+       BORDER RADIUS VARIABLES
+       ========================================== */
+    
+    --radius-small: 4px;                   /* Small border radius */
+    --radius-medium: 8px;                  /* Medium border radius */
+    --radius-large: 12px;                  /* Large border radius */
+    
+    
+    /* ==========================================
+       TRANSITION VARIABLES
+       ========================================== */
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Smooth easing transition - good for general hover effects */
+    
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Bounce easing - good for playful interactions */
+    
+    
+    /* ==========================================
+       DYNAMIC HOVER VARIABLES
+       ========================================== */
+    
+    --transform-hover-x: 0;                /* Hover X translation */
+    --transform-hover-y: 0;                /* Hover Y translation */
+    --transform-hover-rotate: 0deg;        /* Hover rotation */
+    
+    /* These are set dynamically via JavaScript on hover
+       Usage:
+       .item:hover {
+           transform: translate(var(--transform-hover-x), var(--transform-hover-y)) 
+                      rotate(var(--transform-hover-rotate)) 
+                      scale(1.1);
+       }
+    */
+}
+
+
+/* ============================================
+   USAGE EXAMPLES
+   ============================================ */
+
+/*
+   Example 1: Applying transforms to an element
+   ---------------------------------------------
+   .custom-item {
+       transform: translate(var(--transform-1-x), var(--transform-1-y)) 
+                  rotate(var(--transform-1-rotate)) 
+                  scale(var(--transform-1-scale));
+   }
+
+   
+   Example 2: Combining multiple filters
+   ---------------------------------------------
+   .filtered-image {
+       filter: var(--filter-grayscale) 
+               var(--filter-brightness) 
+               var(--filter-contrast) 
+               var(--filter-saturate);
+   }
+
+   
+   Example 3: Applying shadows
+   ---------------------------------------------
+   .card {
+       box-shadow: var(--shadow-medium);
+   }
+   
+   .card:hover {
+       box-shadow: var(--shadow-hover);
+   }
+
+   
+   Example 4: Using size variables
+   ---------------------------------------------
+   .image-container {
+       width: var(--size-medium);
+       height: calc(var(--size-medium) * 0.75);
+   }
+
+   
+   Example 5: Overriding variables inline
+   ---------------------------------------------
+   <div class="item" style="--transform-1-rotate: 10deg; --filter-saturate: saturate(120%);">
+       Content
+   </div>
+
+   
+   Example 6: JavaScript manipulation
+   ---------------------------------------------
+   element.style.setProperty('--transform-hover-rotate', '15deg');
+   element.style.setProperty('--filter-brightness', 'brightness(110%)');
+*/
+
+
+/* ============================================
+   CUSTOMIZATION TIPS
+   ============================================ */
+
+/*
+   1. Color Customization:
+      - Change --bg-main to alter the overall background
+      - Modify --text-primary for different text contrast
+   
+   2. Shadow Intensity:
+      - Increase rgba alpha values for darker shadows
+      - Adjust blur radius (3rd value) for softer/sharper shadows
+   
+   3. Transform Animation:
+      - Modify rotation values for different tilt angles
+      - Adjust scale values for size variations
+      - Use translate values for positional offsets
+   
+   4. Filter Effects:
+      - Increase grayscale(%) for black & white effect
+      - Adjust brightness(%) for lighter/darker images
+      - Modify saturate(%) for more/less vibrant colors
+   
+   5. Responsive Design:
+      - Update size variables in media queries
+      - Adjust transform values for mobile layouts
+*/
+
+
+/* ============================================
+   ADVANCED TECHNIQUES
+   ============================================ */
+
+/*
+   Scoped Custom Properties:
+   -------------------------
+   You can scope variables to specific elements:
+   
+   .special-item {
+       --transform-1-rotate: 25deg;
+       --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.25);
+   }
+   
+   
+   Calc() with Custom Properties:
+   -------------------------------
+   .dynamic-size {
+       width: calc(var(--size-medium) * 1.5);
+       height: calc(var(--size-medium) * 0.8);
+       transform: rotate(calc(var(--transform-1-rotate) * 2));
+   }
+   
+   
+   Fallback Values:
+   ----------------
+   .safe-element {
+       color: var(--text-primary, #333);
+       transform: rotate(var(--transform-1-rotate, 0deg));
+   }
+*/
